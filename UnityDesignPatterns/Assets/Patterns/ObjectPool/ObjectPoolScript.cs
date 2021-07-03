@@ -6,12 +6,16 @@ using UnityEngine;
 
 public class ObjectPoolScript : MonoBehaviour
 {
-   public Queue<GameObject> queue;
+    public Queue<GameObject> queue;
 
     [SerializeField]    
     GameObject spawnObject;
+    [SerializeField]
+    int objectCount;
+
     GameObject objectPoint;
     Transform parentObjectTransform;
+
     void Awake()
     {
         objectPoint = transform.GetChild(0).gameObject;
@@ -20,7 +24,7 @@ public class ObjectPoolScript : MonoBehaviour
     }
     void Start()
     {   
-        Create(5);
+        Create(objectCount);
     }
     void Update()
     {
