@@ -440,6 +440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnObject: {fileID: 1585455834270650960, guid: 265a555d941932e46bde6f020383419c, type: 3}
+  objectCount: 10
 --- !u!1 &1946140359
 GameObject:
   m_ObjectHideFlags: 0
