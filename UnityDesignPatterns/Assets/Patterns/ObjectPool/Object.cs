@@ -8,7 +8,7 @@ public class Object : MonoBehaviour
     ObjectPoolScript _objectPoolScript;
     float createdTime;
     
-    private void Awake()
+    void Awake()
     {
         _objectPoolScript = GameObject.FindObjectOfType<ObjectPoolScript>();
     }

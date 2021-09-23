@@ -7,7 +7,7 @@ using UnityEngine;
 public class ObjectPoolScript : MonoBehaviour
 {
     public Queue<GameObject> queue;
-
+    
     [SerializeField]    
     GameObject spawnObject;
     [SerializeField]
