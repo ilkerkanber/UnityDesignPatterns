@@ -18,7 +18,7 @@ namespace StatePattern
         }
         void Update()
         {
-            Debug.Log(state+" "+state.state);
+            Debug.Log(state.state);
             state = state.Process();
         }
     }

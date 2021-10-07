@@ -22,7 +22,6 @@ public class State
     {
         _animator = animator;
         stage = EVENT.ENTER;
-        Debug.Log("Girdi");
     }
     //
     public virtual void Enter()

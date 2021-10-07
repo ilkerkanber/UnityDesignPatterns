@@ -15,10 +15,9 @@ public class Idle : State
     }
     public override void Update()
     {
-        Debug.Log("IdleUpdate");
+        Debug.Log(stage);
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Debug.Log("Pressed A");
             Exit();
             nextState = new PunchLeft(_animator);
         }
@@ -27,10 +26,14 @@ public class Idle : State
             Exit();
             nextState = new PunchRight(_animator);
         }
-        base.Update();
+        else
+        {
+            base.Update();
+        }
     }
     public override void Exit()
     {
+        Debug.Log("Exit");
         _animator.ResetTrigger("IsIdle");
         base.Exit();
     }

@@ -7,7 +7,6 @@ public class PunchLeft : State
     public PunchLeft(Animator animator) : base(animator)
     {
         state = STATE.PUNCHL;
-        stage = EVENT.ENTER;
     }
     public override void Enter()
     {
@@ -16,12 +15,12 @@ public class PunchLeft : State
     }
     public override void Update()
     {
-        Debug.Log("PunchLeftUpdate");
-        base.Update();
+        Exit();
     }
     public override void Exit()
     {
         _animator.ResetTrigger("IsPunchLeft");
         base.Exit();
+        nextState = new Idle(_animator);
     }
 }

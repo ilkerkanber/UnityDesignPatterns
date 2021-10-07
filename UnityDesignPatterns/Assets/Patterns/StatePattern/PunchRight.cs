@@ -15,11 +15,13 @@ public class PunchRight : State
     }
     public override void Update()
     {
-        base.Update();
+        Debug.Log("PunchRight: UPDATE");
+        Exit();
     }
     public override void Exit()
     {
         _animator.ResetTrigger("IsPunchRight");
         base.Exit();
+        nextState = new Idle(_animator);
     }
 }
